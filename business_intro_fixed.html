@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>경영학과 소개 — 한경국립대학교</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#15110f;--panel:#201916;--panel2:#2b211b;
+  --wine:#6b1f2a;--wine2:#9f3f4f;--pink:#f3a8b5;
+  --gold:#d7a34b;--cream:#fff7ed;--text:#fffaf3;--sub:#cdbfb2;
+  --line:rgba(255,255,255,.14);--green:#b6c75a
+}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:radial-gradient(circle at top right,rgba(159,63,79,.2),transparent 34%),var(--bg);
+  color:var(--text);min-height:100vh;line-height:1.55
+}
+.wrap{max-width:1060px;margin:0 auto;padding:22px}
+header{
+  border:1px solid var(--line);border-radius:22px;padding:34px 30px;
+  background:linear-gradient(135deg,#5b1b26,#8b2f3e 55%,#b16b47);
+  box-shadow:0 18px 45px rgba(0,0,0,.28);position:relative;overflow:hidden
+}
+header:after{content:"BUSINESS";position:absolute;right:18px;top:14px;font-size:70px;font-weight:900;opacity:.075}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800;margin-bottom:12px}
+h1{font-size:42px;font-weight:900;letter-spacing:-1px}
+header p{color:#ffe8dd;margin-top:8px}
+nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+nav a{text-align:center;text-decoration:none;color:var(--text);background:rgba(255,255,255,.06);border:1px solid var(--line);padding:13px;border-radius:14px;font-weight:800}
+nav a.active{background:rgba(215,163,75,.16);border-color:rgba(215,163,75,.55);color:#ffe6b3}
+section{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:22px;margin-top:18px;padding:24px}
+.label{font-size:12px;color:var(--gold);font-weight:900;letter-spacing:1.6px;text-transform:uppercase}
+h2{font-size:23px;margin-top:2px;margin-bottom:16px}
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.box{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:18px}
+.box strong{color:#ffd98c}
+.keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.keywords span{background:rgba(215,163,75,.12);border:1px solid rgba(215,163,75,.38);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;color:#ffe0a3}
+.roadmap{display:grid;gap:14px}
+.year{display:grid;grid-template-columns:140px 1fr 1fr;gap:12px}
+.year-title{border-radius:18px;padding:18px;background:linear-gradient(135deg,rgba(159,63,79,.26),rgba(215,163,75,.08));border:1px solid rgba(243,168,181,.28);display:flex;flex-direction:column;justify-content:center}
+.year-title b{font-size:22px;color:#ffd1d9}
+.year-title span{font-size:12px;color:var(--sub)}
+.sem{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.sem h3{font-size:14px;padding:11px 14px;background:rgba(107,31,42,.55);color:#fff0f3}
+.courses{padding:12px;display:grid;gap:8px}
+.course{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:10px 11px;font-size:13px;font-weight:800;display:flex;gap:8px;align-items:center}
+.course.required{background:rgba(182,199,90,.15);border-color:rgba(182,199,90,.45)}
+.course.choice{background:rgba(243,168,181,.12);border-color:rgba(243,168,181,.38)}
+.course small{margin-left:auto;background:var(--gold);color:#27170c;border-radius:999px;padding:2px 7px;font-size:10px;font-weight:900}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.legend span{border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900}
+.legend .req{background:rgba(182,199,90,.2);border:1px solid rgba(182,199,90,.5)}
+.legend .sel{background:rgba(243,168,181,.16);border:1px solid rgba(243,168,181,.45)}
+.track-grid{display:grid;gap:14px}
+.track{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:center}
+.track-name{font-size:18px;font-weight:900;color:#ffd1d9}
+.arrows{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.arrow{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);padding:12px 18px 12px 16px;min-width:135px;text-align:center;font-size:13px;font-weight:800;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%,10% 50%)}
+.arrow.pink{background:rgba(243,168,181,.18)}
+.arrow.orange{background:rgba(215,163,75,.16)}
+.arrow.blue{background:rgba(88,142,174,.18)}
+.arrow.gray{background:rgba(255,255,255,.11)}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.item{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:17px}
+.icon{font-size:26px;margin-bottom:8px}
+.item h3{font-size:15px;margin-bottom:4px}
+.item p{font-size:12px;color:var(--sub)}
+.notice{background:rgba(215,163,75,.1);border:1px solid rgba(215,163,75,.38);border-radius:16px;padding:15px;color:#ffe6b3;font-size:13px;margin-top:14px}
+footer{text-align:center;color:var(--sub);font-size:12px;margin:22px 0 4px}
+@media(max-width:820px){
+ h1{font-size:30px}.intro,.year,.track{grid-template-columns:1fr}.skill-grid,nav{grid-template-columns:1fr}.arrow{min-width:100%}
+}
+
+  nav a { cursor: default; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="badge">HKNU · Business Administration</div>
+  <h1>경영학과 이수체계도</h1>
+  <p>전공 교과목 편성과 분야별 수강 로드맵을 바탕으로 정리한 경영학과 안내 페이지</p>
+</header>
+
+<nav>
+  <a href="javascript:void(0)">🖥 컴퓨터공학</a>
+  <a href="javascript:void(0)" class="active">📊 경영학</a>
+  <a href="javascript:void(0)">🔗 융합 진로</a>
+</nav>
+
+<section>
+  <div class="label">Overview</div>
+  <h2>경영학은 무엇을 배우나요?</h2>
+  <div class="intro">
+    <div class="box">
+      <p>
+        경영학은 기업과 조직이 목표를 달성하기 위해 필요한 <strong>마케팅, 인사, 재무, 회계, 전략, 창업</strong>을 배우는 전공입니다.
+        데이터를 해석하고 조직의 문제를 분석하여 더 나은 의사결정을 내리는 역량을 기릅니다.
+      </p>
+      <div class="keywords">
+        <span>마케팅</span><span>인사관리</span><span>재무관리</span><span>회계</span><span>경영전략</span>
+      </div>
+    </div>
+    <div class="box">
+      <p><strong>핵심 흐름</strong><br>
+      1학년에는 경영학개론과 전공 이해를 배우고, 2학년부터 마케팅·인사·재무·회계 과목을 통해 전공 기초를 쌓습니다.
+      이후 관심 분야별 트랙을 선택해 심화 과목으로 이어갈 수 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Curriculum</div>
+  <h2>전공 교과목 편성</h2>
+
+  <div class="roadmap">
+    <div class="year">
+      <div class="year-title"><b>1학년</b><span>전공 이해</span></div>
+      <div class="sem">
+        <h3>1학기</h3>
+        <div class="courses">
+          <div class="course required">경영학개론 <small>전공필수</small></div>
+          <div class="course required">법학입문 <small>전공필수</small></div>
+        </div>
+      </div>
+      <div class="sem">
+        <h3>2학기</h3>
+        <div class="courses">
+          <div class="course required">전공의 이해 <small>전공필수</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="year-title"><b>2학년</b><span>전공 기초</span></div>
+      <div class="sem">
+        <h3>1학기</h3>
+        <div class="courses">
+          <div class="course required">경제학개론 <small>전공필수</small></div>
+          <div class="course choice">경영조직론</div>
+          <div class="course choice">회계원리</div>
+          <div class="course choice">경영통계</div>
+          <div class="course choice">조직행동론</div>
+          <div class="course choice">마케팅원론</div>
+          <div class="course choice">재무금융의 이해</div>
+        </div>
+      </div>
+      <div class="sem">
+        <h3>2학기</h3>
+        <div class="courses">
+          <div class="course choice">경영과학</div>
+          <div class="course choice">국제경영</div>
+          <div class="course choice">중급회계Ⅰ</div>
+          <div class="course choice">ESG 경영</div>
+          <div class="course choice">인적자원관리</div>
+          <div class="course choice">마케팅조사 → 데이터 마케팅</div>
+          <div class="course choice">재무관리</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="year-title"><b>3·4학년</b><span>심화 과목</span></div>
+      <div class="sem">
+        <h3>전략·마케팅·인사</h3>
+        <div class="courses">
+          <div class="course choice">광고론</div>
+          <div class="course choice">소비자행동론</div>
+          <div class="course choice">인사조직세미나</div>
+          <div class="course choice">조직행동연구</div>
+        </div>
+      </div>
+      <div class="sem">
+        <h3>재무·회계·창업</h3>
+        <div class="courses">
+          <div class="course choice">중급투자론</div>
+          <div class="course choice">금융상품세미나</div>
+          <div class="course choice">경영분석</div>
+          <div class="course choice">융합창업종합설계</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span class="req">전공필수</span>
+    <span class="sel">전공선택</span>
+  </div>
+
+  <div class="notice">
+    ※ 실제 개설 학기와 과목명은 학년도별 교육과정 및 수강편람에 따라 달라질 수 있으므로 최종 수강 전 학과 공지를 확인해야 합니다.
+  </div>
+</section>
+
+<section>
+  <div class="label">Track Roadmap</div>
+  <h2>분야별 수강 로드맵</h2>
+
+  <div class="track-grid">
+    <div class="track">
+      <div class="track-name">마케팅</div>
+      <div class="arrows">
+        <div class="arrow pink">마케팅원론</div>
+        <div class="arrow pink">데이터 마케팅<br>(마케팅조사)</div>
+        <div class="arrow orange">광고론</div>
+        <div class="arrow orange">소비자행동론</div>
+        <div class="arrow gray">융합창업<br>종합설계</div>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-name">인사</div>
+      <div class="arrows">
+        <div class="arrow pink">조직행동론</div>
+        <div class="arrow pink">인적자원관리</div>
+        <div class="arrow orange">리더십</div>
+        <div class="arrow orange">인사조직세미나</div>
+        <div class="arrow gray">조직행동연구</div>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-name">재무</div>
+      <div class="arrows">
+        <div class="arrow pink">재무금융의 이해</div>
+        <div class="arrow pink">재무관리</div>
+        <div class="arrow orange">중급투자론</div>
+        <div class="arrow orange">금융상품세미나</div>
+        <div class="arrow gray">경영분석</div>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-name">회계</div>
+      <div class="arrows">
+        <div class="arrow blue">회계원리</div>
+        <div class="arrow blue">중급회계Ⅰ</div>
+        <div class="arrow blue">중급회계Ⅱ<br>또는 세무회계</div>
+        <div class="arrow gray">고급회계</div>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-name">전략<br>& 조직</div>
+      <div class="arrows">
+        <div class="arrow blue">경영조직론</div>
+        <div class="arrow blue">ESG 경영<br>또는 국제경영</div>
+        <div class="arrow blue">경영전략론</div>
+        <div class="arrow gray">기업가정신</div>
+      </div>
+    </div>
+
+    <div class="track">
+      <div class="track-name">물류</div>
+      <div class="arrows">
+        <div class="arrow blue">경영통계</div>
+        <div class="arrow blue">경영과학</div>
+        <div class="arrow blue">공급사슬관리론</div>
+        <div class="arrow gray">공급사슬전략</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Core Skills</div>
+  <h2>경영학과에서 기르는 역량</h2>
+  <div class="skill-grid">
+    <div class="item"><div class="icon">📈</div><h3>전략적 사고</h3><p>기업의 방향과 경쟁 전략을 수립합니다.</p></div>
+    <div class="item"><div class="icon">📊</div><h3>데이터 기반 의사결정</h3><p>경영통계와 경영분석을 통해 자료를 해석합니다.</p></div>
+    <div class="item"><div class="icon">👥</div><h3>조직 관리</h3><p>인사와 조직 행동을 이해합니다.</p></div>
+    <div class="item"><div class="icon">💰</div><h3>재무·회계 이해</h3><p>기업의 돈의 흐름과 성과를 분석합니다.</p></div>
+  </div>
+</section>
+
+<footer>한경국립대학교 경영학과 이수체계도 안내</footer>
+</div>
+</body>
+</html>

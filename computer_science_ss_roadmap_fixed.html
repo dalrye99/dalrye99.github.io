@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>컴퓨터공학 SS 전공 이수체계도</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1623;--card:#182235;--card2:#202d44;--blue:#38bdf8;--cyan:#22d3ee;
+  --green:#2ecc8e;--gold:#f0c060;--text:#eef6ff;--sub:#a8b3c4;--line:rgba(255,255,255,.13)
+}
+body{
+  font-family:'Noto Sans KR',sans-serif;background:radial-gradient(circle at top right,rgba(34,211,238,.15),transparent 32%),var(--bg);
+  color:var(--text);min-height:100vh;line-height:1.55
+}
+.wrap{max-width:1040px;margin:0 auto;padding:22px}
+header{
+  background:linear-gradient(135deg,#0b2447,#0f766e);border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;padding:34px 30px;box-shadow:0 18px 45px rgba(0,0,0,.25);position:relative;overflow:hidden
+}
+header:after{content:"SS";position:absolute;right:26px;top:10px;font-size:110px;font-weight:900;opacity:.08}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800;margin-bottom:12px}
+h1{font-size:42px;font-weight:900;letter-spacing:-1px}
+header p{color:#d8f5f1;margin-top:8px}
+nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+nav a{text-align:center;text-decoration:none;color:var(--text);background:rgba(255,255,255,.06);border:1px solid var(--line);padding:13px;border-radius:14px;font-weight:800}
+nav a.active{background:rgba(34,211,238,.14);border-color:rgba(34,211,238,.5);color:#c9fbff}
+section{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:22px;margin-top:18px;padding:24px}
+.label{font-size:12px;color:var(--gold);font-weight:900;letter-spacing:1.6px;text-transform:uppercase}
+h2{font-size:23px;margin-top:2px;margin-bottom:16px}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+.box{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:18px}
+.box strong{color:var(--cyan)}
+.keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.keywords span{background:rgba(46,204,142,.12);border:1px solid rgba(46,204,142,.35);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;color:#b9ffe7}
+.roadmap{display:grid;gap:14px}
+.year{display:grid;grid-template-columns:140px 1fr;gap:12px}
+.year-title{border-radius:18px;padding:18px;background:linear-gradient(135deg,rgba(56,189,248,.18),rgba(46,204,142,.08));border:1px solid rgba(56,189,248,.35);display:flex;flex-direction:column;justify-content:center}
+.year-title b{font-size:22px;color:#b7ecff}
+.year-title span{font-size:12px;color:var(--sub)}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.course{background:var(--card);border:1px solid rgba(56,189,248,.18);border-radius:14px;padding:13px;min-height:76px}
+.course b{display:block;font-size:14px;margin-bottom:4px}
+.course p{font-size:11px;color:var(--sub)}
+.course.core{border-color:rgba(46,204,142,.55);background:rgba(46,204,142,.08)}
+.course.ai{border-color:rgba(240,192,96,.55);background:rgba(240,192,96,.08)}
+.flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.flow span{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-weight:800}
+.flow .arrow{color:var(--cyan);background:transparent;border:0}
+.skills,.careers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.item{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:17px}
+.icon{font-size:26px;margin-bottom:8px}
+.item h3{font-size:15px;margin-bottom:4px}
+.item p{font-size:12px;color:var(--sub)}
+.notice{background:rgba(240,192,96,.1);border:1px solid rgba(240,192,96,.35);border-radius:16px;padding:15px;color:#ffe6ad;font-size:13px;margin-top:14px}
+footer{text-align:center;color:var(--sub);font-size:12px;margin:22px 0 4px}
+@media(max-width:780px){
+  h1{font-size:30px}.intro,.year{grid-template-columns:1fr}.course-grid,.skills,.careers,nav{grid-template-columns:1fr}
+}
+
+  nav a { cursor: default; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="badge">HKNU · 컴퓨터공학 SS 전공</div>
+  <h1>컴퓨터공학 이수체계도</h1>
+  <p>AI 시대 소프트웨어 개발 역량을 기르기 위한 컴퓨터공학 전공 과목 흐름 정리</p>
+</header>
+
+<nav>
+  <a href="javascript:void(0)" class="active">🖥 컴퓨터공학</a>
+  <a href="javascript:void(0)">📊 경영학 소개</a>
+  <a href="javascript:void(0)">🔗 융합 진로</a>
+</nav>
+
+<section>
+  <div class="label">Overview</div>
+  <h2>컴퓨터공학 SS 전공은 무엇을 배우나요?</h2>
+  <div class="intro">
+    <div class="box">
+      <p>
+        컴퓨터공학은 <strong>프로그래밍, 자료구조, 알고리즘, 데이터베이스, 네트워크, 운영체제, 인공지능</strong>을 중심으로
+        소프트웨어를 설계하고 개발하는 전공입니다. SS 전공은 AI 시대에 필요한 개발 역량과 데이터·AI 활용 역량을 함께 기르는 흐름으로 구성됩니다.
+      </p>
+      <div class="keywords">
+        <span>프로그래밍</span><span>자료구조</span><span>알고리즘</span><span>데이터베이스</span><span>AI</span>
+      </div>
+    </div>
+    <div class="box">
+      <p><strong>핵심 흐름</strong><br>
+      1학년에는 프로그래밍 기초를 배우고, 2학년에는 자료구조와 수학 기반을 다집니다.
+      3학년에는 시스템·웹·데이터베이스를 배우며, 4학년에는 AI와 프로젝트 중심으로 실무 역량을 완성합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Curriculum Roadmap</div>
+  <h2>학년별 컴퓨터공학 이수 흐름</h2>
+
+  <div class="roadmap">
+    <div class="year">
+      <div class="year-title"><b>1학년</b><span>기초 다지기</span></div>
+      <div class="course-grid">
+        <div class="course core"><b>컴퓨터공학입문과 파이썬</b><p>컴퓨터공학 전공 이해와 Python 기초</p></div>
+        <div class="course core"><b>프로그래밍입문</b><p>코딩 기초와 문제 해결 사고</p></div>
+        <div class="course"><b>컴퓨팅사고</b><p>문제를 논리적으로 분해하는 사고력</p></div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="year-title"><b>2학년</b><span>핵심 기반 구축</span></div>
+      <div class="course-grid">
+        <div class="course core"><b>자료구조</b><p>데이터 저장 방식과 알고리즘의 기반</p></div>
+        <div class="course"><b>융합이산수학</b><p>AI·ML 학습을 위한 수학 기초</p></div>
+        <div class="course"><b>C++ 프로그래밍</b><p>객체지향과 시스템 개발 기초</p></div>
+        <div class="course"><b>시스템프로그래밍</b><p>컴퓨터 시스템과 저수준 프로그래밍</p></div>
+        <div class="course core"><b>알고리즘 분석</b><p>문제 해결 절차와 효율성 분석</p></div>
+        <div class="course"><b>SW개발 프로젝트Ⅰ</b><p>팀 기반 소프트웨어 개발 경험</p></div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="year-title"><b>3학년</b><span>전문 역량 집중</span></div>
+      <div class="course-grid">
+        <div class="course core"><b>데이터베이스</b><p>데이터 저장·관리·검색 기술</p></div>
+        <div class="course core"><b>JAVA 웹개발</b><p>웹 서비스 구현과 서버 개발</p></div>
+        <div class="course"><b>운영체제</b><p>프로세스, 메모리, 파일 시스템 이해</p></div>
+        <div class="course"><b>컴퓨터네트워크</b><p>인터넷과 TCP/IP 통신 원리</p></div>
+        <div class="course"><b>소프트웨어설계</b><p>서비스 구조와 설계 방법</p></div>
+        <div class="course"><b>UI/UX 설계</b><p>사용자 중심 화면과 경험 설계</p></div>
+      </div>
+    </div>
+
+    <div class="year">
+      <div class="year-title"><b>4학년</b><span>AI·프로젝트 응용</span></div>
+      <div class="course-grid">
+        <div class="course ai"><b>인공지능</b><p>AI 개념, 탐색, 추론, 학습 기초</p></div>
+        <div class="course ai"><b>빅데이터분석</b><p>대용량 데이터 분석과 활용</p></div>
+        <div class="course ai"><b>머신러닝</b><p>데이터 기반 모델 학습과 예측</p></div>
+        <div class="course"><b>컴퓨터그래픽스</b><p>시각 정보 표현과 그래픽 처리</p></div>
+        <div class="course"><b>컴퓨터비전</b><p>이미지·영상 인식 기술</p></div>
+        <div class="course core"><b>캡스톤디자인</b><p>전공 지식을 활용한 졸업 프로젝트</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <span>프로그래밍 기초</span><span class="arrow">→</span>
+    <span>자료구조·알고리즘</span><span class="arrow">→</span>
+    <span>시스템·데이터베이스</span><span class="arrow">→</span>
+    <span>AI·프로젝트</span>
+  </div>
+
+  <div class="notice">
+    ※ 실제 수강 과목과 개설 학기는 학년도별 교육과정과 시간표에 따라 달라질 수 있으므로, 최종 수강 전 학과 공지와 수강편람을 확인해야 합니다.
+  </div>
+</section>
+
+<section>
+  <div class="label">Core Skills</div>
+  <h2>컴퓨터공학 전공으로 쌓는 역량</h2>
+  <div class="skills">
+    <div class="item"><div class="icon">💻</div><h3>개발 역량</h3><p>Python, Java, C++ 기반 프로그래밍</p></div>
+    <div class="item"><div class="icon">🧩</div><h3>문제 해결</h3><p>자료구조와 알고리즘 기반 사고력</p></div>
+    <div class="item"><div class="icon">🗄️</div><h3>데이터 관리</h3><p>데이터베이스와 빅데이터 처리</p></div>
+    <div class="item"><div class="icon">🤖</div><h3>AI 활용</h3><p>인공지능과 머신러닝 이해</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="label">Career</div>
+  <h2>컴퓨터공학 기반 진로</h2>
+  <div class="careers">
+    <div class="item"><div class="icon">🌐</div><h3>웹/앱 개발자</h3><p>서비스 화면과 서버 기능 구현</p></div>
+    <div class="item"><div class="icon">📊</div><h3>데이터 분석가</h3><p>데이터 기반 인사이트 도출</p></div>
+    <div class="item"><div class="icon">🤖</div><h3>AI 개발자</h3><p>AI 모델과 서비스 적용</p></div>
+    <div class="item"><div class="icon">🔒</div><h3>시스템·보안 분야</h3><p>네트워크, 서버, 보안 인프라 관리</p></div>
+  </div>
+</section>
+
+<footer>한경국립대학교 컴퓨터공학 SS 전공 이수체계도 안내</footer>
+</div>
+</body>
+</html>
